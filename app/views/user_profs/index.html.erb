@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing User Profs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Male</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_profs.each do |user_prof| %>
+      <tr>
+        <td><%= user_prof.name %></td>
+        <td><%= user_prof.age %></td>
+        <td><%= user_prof.male %></td>
+        <td><%= link_to 'Show', user_prof %></td>
+        <td><%= link_to 'Edit', edit_user_prof_path(user_prof) %></td>
+        <td><%= link_to 'Destroy', user_prof, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User prof', new_user_prof_path %>

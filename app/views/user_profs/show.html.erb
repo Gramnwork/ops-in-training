@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+
+<p>
+  <strong>Name:</strong>
+  <%= @user_prof.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @user_prof.age %>
+</p>
+
+<p>
+  <strong>Male:</strong>
+  <%= @user_prof.male %>
+</p>
+
+<%= link_to 'Edit', edit_user_prof_path(@user_prof) %> |
+<%= link_to 'Back', user_profs_path %>
