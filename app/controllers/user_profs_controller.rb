@@ -5,20 +5,24 @@ class UserProfsController < ApplicationController
   # GET /user_profs.json
   def index
     @user_profs = UserProf.all
+    @user_title = 'ユーザー一覧'
   end
 
   # GET /user_profs/1
   # GET /user_profs/1.json
   def show
+    @user_title = '情報表示'
   end
 
   # GET /user_profs/new
   def new
     @user_prof = UserProf.new
+    @user_title = '新規登録'
   end
 
   # GET /user_profs/1/edit
   def edit
+    @user_title = '情報編集'
   end
 
   # POST /user_profs

@@ -47,6 +47,16 @@ li{
 .container{
 	padding:20px 30px;
 	height: auto;
+	position: relative;
+	width:60%;
+	min-width: 300px;
+	max-width: 600px;
+	margin:0 auto;
+}
+.sidebar{
+	position: absolute;
+	top:30px;
+	right: 30px;
 }
 
 header, footer{
