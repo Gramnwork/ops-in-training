@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="content-language" content="ja">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title><%= @title_tag %></title>
+	<title><%= @title_tag %> <%= @user_title %></title>
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	<%= csrf_meta_tags %>
@@ -24,7 +24,7 @@
 			</div>
 		</div><!-- /.container -->
 		<footer>
-			<div class="f_text">アプリ名</div>
+			<div class="f_text"><%= @title_tag %></div>
 		</footer>
 	</div><!-- /.wrap -->
 </body>
