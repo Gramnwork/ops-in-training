@@ -1,14 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-  <title>App</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+<meta http-equiv="content-language" content="ja">
+	<title>App</title>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
 </head>
 <body>
-
+<div class="wrap">
+<header>
+<h2>アプリ名</h2>
+</header>
+<div class="container">
 <%= yield %>
-
+</div><!-- /.container -->
+<footer>
+<div class="f_text">アプリ名</div>
+</footer>
+</div><!-- /.wrap -->
 </body>
 </html>
