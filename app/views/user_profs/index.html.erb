@@ -15,7 +15,7 @@
   <tbody>
     <% @user_profs.each do |user_prof| %>
       <tr>
-        <td><%= user_prof.name %></td>
+        <td class="user_name"><%= user_prof.name %></td>
         <td><%= user_prof.age %></td>
         <td><%= user_prof.male %></td>
         <td><%= link_to 'Show', user_prof %></td>
