@@ -12,6 +12,7 @@ class UserProfsController < ApplicationController
   # GET /user_profs/1.json
   def show
     @user_title = '情報表示'
+    render action: 'user_detail', layout: 'user_detail'
   end
 
   # GET /user_profs/new

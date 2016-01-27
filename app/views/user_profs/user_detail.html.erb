@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @user_title %></h1>
+<p>（user_detailのview適用）</p>
+
+<table>
+	<tr>
+		<th>Name</th>
+		<td><%= @user_prof.name %></td>
+	</tr>
+	<tr>
+		<th>Age</th>
+		<td><%= @user_prof.age %></td>
+	</tr>
+	<tr>
+		<th>Male</th>
+		<td><%= @user_prof.male %></td>
+	</tr>
+</table>
+
+<%= link_to 'Edit', edit_user_prof_path(@user_prof) %> |
+<%= link_to 'Back', user_profs_path %>
