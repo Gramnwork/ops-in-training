@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160125065733) do
+ActiveRecord::Schema.define(version: 20160127050111) do
 
   create_table "user_profs", force: :cascade do |t|
     t.string   "name"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20160125065733) do
     t.boolean  "male"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "blood_type"
   end
 
 end

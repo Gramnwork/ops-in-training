@@ -74,6 +74,6 @@ class UserProfsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_prof_params
-      params.require(:user_prof).permit(:name, :age, :male)
+      params.require(:user_prof).permit(:name, :age, :male, :blood_type)
     end
 end

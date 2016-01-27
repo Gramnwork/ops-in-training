@@ -8,6 +8,7 @@
       <th>Name</th>
       <th>Age</th>
       <th>Male</th>
+      <th>Blood_type</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,6 +19,7 @@
         <td class="user_name"><%= user_prof.name %></td>
         <td><%= user_prof.age %></td>
         <td <%= add_female_if(user_prof.male) %>><%= user_prof.male %></td>
+        <td><%= user_prof.blood_type %></td>
         <td><%= link_to 'Show', user_prof %></td>
         <td><%= link_to 'Edit', edit_user_prof_path(user_prof) %></td>
         <td><%= link_to 'Destroy', user_prof, method: :delete, data: { confirm: 'Are you sure?' } %></td>

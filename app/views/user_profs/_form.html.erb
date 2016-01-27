@@ -23,6 +23,11 @@
     <%= f.label :male %><br>
     <%= f.check_box :male %>
   </div>
+  <!--入力項目（血液型）追加-->
+  <div class="field">
+    <%= f.label :bood_type %><br>
+    <%= f.select :blood_type, ["A", "B", "AB", "O"]%>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
