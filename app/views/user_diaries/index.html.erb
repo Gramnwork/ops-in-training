@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing User Diaries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Diary title</th>
+      <th>Diary content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_diaries.each do |user_diary| %>
+      <tr>
+        <td><%= user_diary.diary_title %></td>
+        <td><%= user_diary.diary_content %></td>
+        <td><%= link_to 'Show', user_diary %></td>
+        <td><%= link_to 'Edit', edit_user_diary_path(user_diary) %></td>
+        <td><%= link_to 'Destroy', user_diary, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User diary', new_user_diary_path %>
