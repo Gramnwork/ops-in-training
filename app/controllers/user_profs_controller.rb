@@ -1,3 +1,4 @@
+require 'pp'
 class UserProfsController < ApplicationController
   before_action :set_user_prof, only: [:show, :edit, :update, :destroy]
 
@@ -19,6 +20,8 @@ class UserProfsController < ApplicationController
   def new
     @user_prof = UserProf.new
     @user_title = '新規登録'
+    @user_prof.diaries.build
+    #@diary.diaries.build
   end
 
   # GET /user_profs/1/edit
@@ -27,12 +30,26 @@ class UserProfsController < ApplicationController
   end
 
   # POST /user_profs
-  # POST /user_profs.json
+  # POST /user_profs.josn
   def create
+pp params
+pp "--------"
+
+pp user_prof_params
+pp "--------"
+    p "params #{params}" # user_profで整形される前の全パラメーターを
     @user_prof = UserProf.new(user_prof_params)
+    p "user_prof_params #{user_prof_params}"
+
+    #p "user_prof_params #{user_prof_params}"
+    #p "user_prof_params.diaries #{user_prof_params.diaries}"
+    #p "user_prof_params.diaries_attributes: #{user_prof_params.diaries_attributes}"
+
+    #@diary = Diary.new(user_prof_params.diaries_attributes)
 
     respond_to do |format|
       if @user_prof.save
+      #if @user_prof.save && @diary.save
         format.html { redirect_to @user_prof, notice: 'User prof was successfully created.' }
         format.json { render :show, status: :created, location: @user_prof }
       else
@@ -74,6 +91,10 @@ class UserProfsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_prof_params
-      params.require(:user_prof).permit(:name, :age, :male)
+pp "^^user_prof_params^^"
+      #params.require(:user_prof).permit(:name, :age, :male, :blood_type)
+      #params.require(:user_prof).permit(:name, :age, :male, :blood_type, diaries_attributes: [:user_prof_id, :title, :content])
+      # params.require(:user_prof).permit(:name, :age, :male, :blood_type, diaries: [:user_prof_id, :title, :content])
+      params.require(:user_prof).permit(:name, :age, :male, :blood_type, :diaries)
     end
 end

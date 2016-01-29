@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160125065733) do
+ActiveRecord::Schema.define(version: 20160129074107) do
+
+  create_table "diaries", force: :cascade do |t|
+    t.integer  "user_prof_id"
+    t.string   "title"
+    t.text     "content"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "diaries", ["user_prof_id"], name: "index_diaries_on_user_prof_id"
 
   create_table "user_profs", force: :cascade do |t|
     t.string   "name"
@@ -19,6 +29,7 @@ ActiveRecord::Schema.define(version: 20160125065733) do
     t.boolean  "male"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "blood_type"
   end
 
 end
