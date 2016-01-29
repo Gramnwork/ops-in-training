@@ -11,19 +11,19 @@ class UserProfsController < ApplicationController
   # GET /user_profs/1
   # GET /user_profs/1.json
   def show
-    @user_title = 'ops-in トレーニング用アプリ 情報表示'
+    @user_title = '情報表示'
     render action: 'user_detail', layout: 'user_detail'
   end
 
   # GET /user_profs/new
   def new
     @user_prof = UserProf.new
-    @user_title = 'ops-in トレーニング用アプリ新規登録'
+    @user_title = '新規登録'
   end
 
   # GET /user_profs/1/edit
   def edit
-    @user_title = 'ops-in トレーニング用アプリ 情報編集'
+    @user_title = '情報編集'
   end
 
   # POST /user_profs
