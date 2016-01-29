@@ -15,7 +15,9 @@ body{
 	margin:0;
 	padding:0;
 }
-
+table{
+	margin-bottom:15px;
+}
 table, th, td{
 	border-collapse: collapse;
 	border: 1px solid #ddd;
@@ -89,10 +91,3 @@ footer .f_text{
 	display: table-cell;
 	vertical-align: middle;
 }
-
-
-
-
-
-
-
