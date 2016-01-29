@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :user_diaries
+  resources :diaries
   resources :user_profs
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

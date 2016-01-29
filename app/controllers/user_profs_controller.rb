@@ -19,6 +19,7 @@ class UserProfsController < ApplicationController
   def new
     @user_prof = UserProf.new
     @user_title = '新規登録'
+    @user_prof.diaries.build #3-4. ユーザーを作ったら日記も作成
   end
 
   # GET /user_profs/1/edit

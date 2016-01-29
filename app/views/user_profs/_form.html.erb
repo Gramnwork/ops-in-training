@@ -28,6 +28,13 @@
     <%= f.label :bood_type %><br>
     <%= f.select :blood_type, ["A", "B", "AB", "O"]%>
   </div>
+
+  <%= f.fields_for :diaries do |a| %>
+  <div class="field">
+    <%= a.label :title %><br>
+    <%= a.text_field :title %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
