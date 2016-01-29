@@ -7,4 +7,8 @@ class UserProf < ActiveRecord::Base
 	# 3-3. User一覧に女性のみ表示
 	scope :user_female, -> {where(male: false)}
 
+	# 3-4. ユーザーは日記を複数持つ
+	has_many :diaries, dependent: :destroy
+	accepts_nested_attributes_for :diaries
+
 end
