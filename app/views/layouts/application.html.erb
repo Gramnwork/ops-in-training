@@ -3,22 +3,29 @@
 <head>
 	<meta http-equiv="content-language" content="ja">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>App</title>
+	<title><%= @title_tag %> <%= @user_title %></title>
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	<%= csrf_meta_tags %>
 </head>
 <body>
-<div class="wrap">
-<header>
-<h2>アプリ名</h2>
-</header>
-<div class="container">
-<%= yield %>
-</div><!-- /.container -->
-<footer>
-<div class="f_text">アプリ名</div>
-</footer>
-</div><!-- /.wrap -->
+	<div class="wrap">
+		<header>
+			<h2><%= @title_tag %></h2>
+		</header>
+		<div class="container">
+			<%= yield %>
+			<div class="sidebar">
+				<ul>
+					<li><a href="/user_profs/">一覧表示</a></li>
+					<li><a href="/user_profs/new">新規登録</a></li>
+
+				</ul>
+			</div>
+		</div><!-- /.container -->
+		<footer>
+			<div class="f_text"><%= @title_tag %></div>
+		</footer>
+	</div><!-- /.wrap -->
 </body>
 </html>
